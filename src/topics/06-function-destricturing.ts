@@ -1,5 +1,5 @@
-// interface para crear objetos
-interface Product {
+// interface para crear objetos, la exportamos
+export interface Product {
     description: string;
     price: number;
 }
@@ -17,7 +17,7 @@ const tablet: Product = {
 }
 
 // interface que se usa para calcular el impuesto
-interface TaxCalculationOptions{
+export interface TaxCalculationOptions{
     tax: number;
     products: Product[];
 }
@@ -25,7 +25,7 @@ interface TaxCalculationOptions{
 
 
 // funcion para calcular el impuesto sobre el producto
-function taxCalculation(options: TaxCalculationOptions): number[]{
+export function taxCalculation(options: TaxCalculationOptions): number[]{
 
     let total = 0;
 
@@ -39,16 +39,14 @@ function taxCalculation(options: TaxCalculationOptions): number[]{
 }
  
 // lista de productos e impuesto
-const[prod1, prod2]: Product[] = [phone, tablet];
-const tax = 0.21;
+// const[prod1, prod2]: Product[] = [phone, tablet];
+// const tax = 0.21;
 
 // llamamos a la funcion para calcular el impuesto 
-const [total, totalTax] = taxCalculation({
-    products: [prod1, prod2],
-    tax
-})
+// const [total, totalTax] = taxCalculation({
+//     products: [prod1, prod2],
+//     tax
+// })
 
-console.log('Toal: ', total);
-console.log('Tax: ', totalTax);
-
-export{};
+// console.log('Total: ', total);
+// console.log('Tax: ', totalTax);
