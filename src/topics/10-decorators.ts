@@ -10,7 +10,7 @@ function classDecorator(
 }
 
 // decorador creado arriba
-@classDecorator
+// @classDecorator
 export class SuperClass{
 
     public myProperty: string = 'Abc123';
@@ -19,7 +19,7 @@ export class SuperClass{
         console.log('Hola mundo');
     }
 }
-
+ 
 console.log(SuperClass);
 
 const myClass = new SuperClass();
